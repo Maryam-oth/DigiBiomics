@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBreath - AI Respiratory Diagnosis</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SmartBreath</h1>
+      <p class="subtitle">AI-Powered Respiratory Disease Diagnosis</p>
+    </header>
+
+    <div class="main-content">
+      <!-- Upload Section -->
+      <div class="upload-section">
+        <h2 class="section-title">Upload Stethoscope Audio</h2>
+
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon"><i class="fas fa-file-audio"></i></div>
+          <div class="upload-text">Click to upload or drag your audio file here</div>
+          <div class="file-info">Supported formats: WAV, MP3, FLAC (max 10MB)</div>
+        </div>
+
+        <div id="fileName" class="file-name"></div>
+
+        <button class="btn" id="analyzeBtn" disabled>Analyze Audio</button>
+        <button class="btn btn-secondary" id="resetBtn">Reset</button>
+      </div>
+
+      <!-- Results Section -->
+      <div class="results-section">
+        <h2 class="section-title">Diagnosis Result</h2>
+
+        <div class="diagnosis-result" id="diagnosisResult">
+          <div class="result-icon"><i class="fas fa-lungs"></i></div>
+          <div class="result-text">Upload audio to begin analysis</div>
+        </div>
+
+        <div class="status-bar">
+          <div class="status" id="status">
+            <div class="status-indicator"></div>
+            <span>Ready for upload</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+          <div id="progressText">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>How to Use SmartBreath</h3>
+      <ol>
+        <li>Record respiratory sounds using a digital stethoscope or smartphone</li>
+        <li>Upload the audio file (WAV, MP3, or FLAC format)</li>
+        <li>Click "Analyze Audio" to send the file to our AI model</li>
+        <li>View your diagnosis result instantly</li>
+        <li>For best results, ensure clear audio with minimal background noise</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
